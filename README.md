@@ -2,16 +2,18 @@
 
 #--------------------------------------------------------
 
-You will need Node.js version 16.13.0 or greater.
+You will need Node.js version 16.13.0 or greater, npm, typescript, ts-node.
 
-You may also need the Node Package Manager, npm.
-
-  node --version
+  node --version (to check node version)
 
 
 You will need the Angular CLI.
 
   npm install -g @angular/cli
+
+You may need to run the npm installer again to apply changes.
+
+  npm install
 
 #--------------------------------------------------------
 

@@ -6,6 +6,7 @@ import { TaskService } from '../task.service';
 @Component({
   selector: 'app-tasks-list',
   template: `
+
     <h2 class="text-center m-5">Task List</h2>
  
  <table class="table table-striped table-bordered">
@@ -48,6 +49,8 @@ import { TaskService } from '../task.service';
   styles: [
   ]
 })
+
+
 export class TasksListComponent implements OnInit {
   
   tasks$: Observable<Task[]> = new Observable();

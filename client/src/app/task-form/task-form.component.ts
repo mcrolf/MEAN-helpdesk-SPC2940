@@ -24,15 +24,18 @@ import { Task } from '../task';
 
     <div class="mb-3"> <!-- Department -->
       <div class="form-check">
-        <input class="form-check-input" type="radio" formControlName="department" name="department" id="department-dev" value="dev" required>
+        <input class="form-check-input" type="radio" formControlName="department" name="department" 
+          id="department-dev" value="dev" required>
         <label class="form-check-label" for="department-dev">Development</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" formControlName="department" name="department" id="department-hr" value="hr">
+        <input class="form-check-input" type="radio" formControlName="department" name="department" 
+          id="department-hr" value="hr">
         <label class="form-check-label" for="department-hr">H.R.</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" formControlName="department" name="department" id="department-gen" value="gen">
+        <input class="form-check-input" type="radio" formControlName="department" name="department" 
+          id="department-gen" value="gen">
         <label class="form-check-label" for="department-gen">General</label>
       </div>
     </div>
@@ -51,22 +54,34 @@ import { Task } from '../task';
       </div>
     </div>
 
-    <div class="form-floating mb-3">
-      <input class="form-control" type="date" formControlName="created" placeholder="Created">
+    <div class="form-floating mb-3"> <!-- Date Created -->
+      <input class="form-control" type="date" formControlName="created" placeholder="Created" required>
       <label for="created">Created</label>
     </div>
-
-    <div class="form-check">
-      <input class="form-control" type="radio" formControlName="completed" placeholder="Completed">
-      <label for="completed">Completed</label>
+    <div *ngIf="created.invalid && (created.dirty || created.touched)" class="alert alert-danger">
+      <div *ngIf="created.errors?.['required']">
+        Date is required.
+      </div>
+    </div>
+    
+    <div class="mb-3"> <!-- completed -->
+      <div class="form-check">
+        <input class="form-check-input" type="date" formControlName="completed" name="completed" id="completed-yes">
+        <label class="form-check-label" for="completed">Completed</label>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="radio" formControlName="completed" name="completed" id="completed-no" 
+          value="Incomplete" required>
+        <label class="form-check-label" for="completed">Incomplete</label>
+      </div>
     </div>
 
-    <div class="form-floating mb-3">
+    <div class="form-floating mb-3"> <!-- Technician Notes -->
       <input class="form-control" type="text" formControlName="techNotes" placeholder="TechNotes" required>
       <label for="techNotes">Tech Notes</label>
     </div>
  
-    <button class="btn btn-primary" type="submit" [disabled]="taskForm.invalid">Add</button>
+    <button class="btn btn-primary" type="submit" [disabled]="taskForm.invalid">Submit</button>
   </form>
   `,
   styles: [

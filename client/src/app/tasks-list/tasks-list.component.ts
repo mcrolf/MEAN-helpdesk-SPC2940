@@ -7,7 +7,7 @@ import { TaskService } from '../task.service';
   selector: 'app-tasks-list',
   template: `
 
-    <h2 class="text-center m-5">Task List</h2>
+    <h2 class="text-center m-5">Tickets</h2>
  
  <table class="table table-striped table-bordered">
      <thead>

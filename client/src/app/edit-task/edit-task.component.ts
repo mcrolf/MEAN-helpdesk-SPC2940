@@ -34,8 +34,13 @@ export class EditTaskComponent implements OnInit{
       this.task.next(task);
     });
   }
- 
+  
+  //--------------------------------------------------------
+  // method for submitting updated task
+  // with confirmation message
+  //--------------------------------------------------------
   editTask(task: Task) {
+    if(confirm('You are about to update this task. Proceed?'))
     this.taskService.updateTask(this.task.value._id || '', task)
       .subscribe({
         next: () => {

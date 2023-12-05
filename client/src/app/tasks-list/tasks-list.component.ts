@@ -37,7 +37,8 @@ import { TaskService } from '../task.service';
              <td>{{task.techNotes}}</td>
              
              <td> <!-- ACTION -->
-                 <button class="btn btn-primary me-1" [routerLink]="['edit/', task._id]">Edit</button>
+                <!-- Tasks that have a completed date cannot be edited -->
+                 <button *ngIf="task.completed == 'Incomplete'" class="btn btn-primary me-1" [routerLink]="['edit/', task._id]">Edit</button>
                  <button class="btn btn-danger" (click)="deleteTask(task._id || '')">Delete</button>
              </td>
          </tr>
@@ -66,8 +67,10 @@ export class TasksListComponent implements OnInit {
   
   //-----------------------------------
   // component method delete task
+  // includes confirmation for task deletion
   //-----------------------------------
   deleteTask(id: string): void {
+    if (confirm('Are you sure you would like to delete this task?'))
     this.tasksService.deleteTask(id).subscribe({
       next: () => this.fetchTasks()
     });

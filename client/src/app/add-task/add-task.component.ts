@@ -17,7 +17,12 @@ export class AddTaskComponent {
 
   constructor(private router: Router, private taskService: TaskService){}
 
+  //-----------------------------------------------
+  // method to submit task to database
+  // confirmation message
+  //-----------------------------------------------
   addTask(task: Task) {
+    if(confirm('Submit task to database?'))
     this.taskService.createTask(task)
       .subscribe({
         next: () => {

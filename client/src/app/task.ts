@@ -4,6 +4,6 @@ export interface Task {
     department?: "dev" | "hr" | "gen";
     description?: string;
     created?: Date;
-    completed?: boolean;
+    completed?: string;
     techNotes?: string;
 }

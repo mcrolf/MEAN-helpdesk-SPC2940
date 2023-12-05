@@ -25,17 +25,17 @@ import { Task } from '../task';
     <div class="mb-3"> <!-- Department -->
       <div class="form-check">
         <input class="form-check-input" type="radio" formControlName="department" name="department" 
-          id="department-dev" value="dev" required>
+          id="department-dev" value="Dev" required>
         <label class="form-check-label" for="department-dev">Development</label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" formControlName="department" name="department" 
-          id="department-hr" value="hr">
+          id="department-hr" value="H.R.">
         <label class="form-check-label" for="department-hr">H.R.</label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" formControlName="department" name="department" 
-          id="department-gen" value="gen">
+          id="department-gen" value="General">
         <label class="form-check-label" for="department-gen">General</label>
       </div>
     </div>
@@ -66,7 +66,8 @@ import { Task } from '../task';
     
     <div class="mb-3"> <!-- completed -->
       <div class="form-check">
-        <input class="form-check-input" type="date" formControlName="completed" name="completed" id="completed-yes">
+        <input class="form-check-input" type="date" formControlName="completed" name="completed" id="completed-yes"
+          value="True" >
         <label class="form-check-label" for="completed">Completed</label>
       </div>
       <div class="form-check mb-3">

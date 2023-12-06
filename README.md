@@ -17,6 +17,11 @@ You may need to run the npm installer again to apply changes.
 
 #--------------------------------------------------------
 
+You will need to create an account with Mongodb Atlas to deploy a database to connect to.
+
+https://www.mongodb.com/atlas/database
+
+Further information on how to create an account and set up a cluster will be in the powerpoint presentation.
 
 #--------------------------------------------------------
 

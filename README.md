@@ -21,7 +21,7 @@ You will need to create an account with Mongodb Atlas to deploy a database to co
 
 https://www.mongodb.com/atlas/database
 
-Further information on how to create an account and set up a cluster will be in the powerpoint presentation.
+
 
 #--------------------------------------------------------
 
